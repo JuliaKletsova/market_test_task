@@ -1,0 +1,57 @@
+table {
+	font-family: Futura, sans-serif;
+	position: relative;
+	left: 5vw;
+	font-size: 40px;
+	width: 90%;
+	border-collapse: collapse;
+	color: #0F141E;
+	margin-top: 15vh;
+	padding: 0;
+}
+
+thead {
+    text-align: left;
+    font-family: Futura, sans-serif;
+    font-weight: 500;
+    color: crimson;
+    font-size: 4vh;
+}
+
+
+tr {
+	border-bottom: 1px solid #0F141E;
+}
+
+tbody tr {
+	height: 10vh;
+	transition: all .3s ease;
+	font-size: 3vh;
+}
+
+
+tbody tr:hover {
+	box-shadow: 8px 10px crimson;
+	border: 1px solid #0F141E; 
+}
+
+td {
+	padding: 10px 0;
+    font-family: Futura, sans-serif;
+    text-align: center;
+}
+
+.status {
+	color: crimson;
+	font-weight: 600;
+}
+
+p {
+	display: block;
+	font-family: Futura, sans-serif;
+	font-size: 5vw;
+    font-weight: 500;
+    color: crimson;
+    position: relative;
+    text-align: center;
+}

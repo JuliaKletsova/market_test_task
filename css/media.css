@@ -1,0 +1,126 @@
+#hours {
+	display: block;
+	box-sizing: content-box;
+	position: absolute;
+	left: 7vw;
+	font-family: Futura, sans-serif;
+	color: crimson;
+	width: auto;
+	padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #hours {
+		top: 10vw;
+		font-family: Futura, sans-serif;
+		color: crimson;
+		width: auto;
+		font-size: 2vh;
+	}
+
+	.image {
+		width: 8%;
+		height: 8%;
+	}
+
+	thead {
+		display: none;
+	}
+
+	tbody {
+		width: 100vw;
+		height: 100vw;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	tr {
+		padding: 3vw;
+		width: 100vw;
+		border-bottom: 1px solid #0F141E;
+	}
+
+	tbody tr {
+		height: 5vh;
+		transition: all .3s ease;
+		font-size: 3vh;
+	}
+
+	td {
+		width: 10%;
+
+	}
+
+	td:nth-of-type(4) {
+		display: none;
+	}
+
+	.status {
+		display: none;
+	}
+} 
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+    #hours {
+		top: 9vw;
+		font-family: Futura, sans-serif;
+		color: crimson;
+		width: auto;
+		font-size: 1.5vh;
+	}
+
+	.image {
+		width: 10%;
+		height: 10%;
+	}
+
+	thead {		
+		font-size: 2.5vh;
+	}
+
+	tbody {
+		width: 100vw;
+		height: 100vw;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	tr {
+		padding: 3vw;
+		width: 100vw;
+		border-bottom: 1px solid #0F141E;
+	}
+
+	tbody tr {
+		height: 5vh;
+		transition: all .3s ease;
+		font-size: 3vh;
+	}
+
+	tbody tr td {
+		font-size: 2vh;
+	}
+
+	td:first-of-type {
+		width: auto;
+
+	}
+
+	td:nth-of-type(4) {
+		display: none;
+	}
+
+	td .status {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1201px) {
+   #hours {
+		top: 5vw;
+		font-family: Futura, sans-serif;
+		color: crimson;
+		width: auto;
+		font-size: 3vh;
+	}
+}

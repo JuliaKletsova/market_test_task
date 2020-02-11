@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Табло Вылета</title>
+		<meta property="description" content="Сайт табло по тестовому заданию">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" user-scalable="no">
+		<meta name="viewport" content="viewport-fit=cover, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="shortcut icon" href="images/airplane.png" type="image/png">
+		<link rel="stylesheet" type="text/css" href="css/style_departures.css">
+		<link rel="stylesheet" type="text/css" href="css/table_style.css">
+		<link rel="stylesheet" type="text/css" href="css/search.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+		<script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
+		<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+		<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="js/table_animation.js"></script>
+	</head>
+	<body>
+		<div class="div-header">
+			<a href="index.html"><img class="image" src="images/airplane.png" width="5%" height="4%"></a>
+			<header class="header-text">Табло вылета</header>
+			<div id="hours">
+				<script type="text/javascript" src="js/date.js"></script>
+			</div>
+			<div class="search">
+				<form class="form">
+				  <input id="search-text" type="text" autocomplete="off" placeholder="Искать здесь...">
+				</form>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<td class="table-header">Время отправления</td>
+						<td class="table-header">Город назначения</td>
+						<td class="table-header">Номер рейса</td>
+						<td class="table-header">Время прибытия</td>
+					</tr>
+				</thead>
+    			<tbody id="tbody"></tbody>
+			</table>
+			<p id="wait">Пожалуйста, подождите, данные загружаются...</p>
+			<div class="message-div">
+				<p class="message">Ничего не найдено</p>
+			</div>
+			<script type="text/javascript" src="js/search.js"></script> 
+			<script type="text/javascript" src="js/generation_table.js"></script>
+			<script type="text/javascript">
+				$.ajax({
+					datatype: "json",
+					type: "GET",
+					url: "https://opensky-network.org/api/flights/all?begin=1517227200&end=1517230800",
+					timeout: 15000,
+					success: function(response) {
+					        generateHtmlTable(response, "departure");
+					},
+					error: function (request, status, error) {
+					    alert('Проблемы с API пожалуйста перезагрузите страницу.');
+					}
+				});
+			</script>
+		</div>
+	</body>
+</html>
