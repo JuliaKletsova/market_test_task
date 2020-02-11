@@ -14,11 +14,12 @@ function search(e) {
   });
 }
 
-$('#search-text').keydown(function (e) {
+$('#search-text').keyup(function (e) {
   search(e);
+  console.log(e.target.value);
 });
 
-$('#search-text').keydown(function (e) {
+$('#search-text').keydown(function () {
   if(document.querySelectorAll("tr").length == document.querySelectorAll(".not_found").length) {
     document.querySelector('.message').style.visibility = 'visible';  
   } else  document.querySelector('.message').style.visibility = 'hidden'; 
